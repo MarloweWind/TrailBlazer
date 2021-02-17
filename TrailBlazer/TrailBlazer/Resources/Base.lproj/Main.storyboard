@@ -30,10 +30,13 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="vcK-md-HFZ">
-                        <barButtonItem key="leftBarButtonItem" image="location" catalog="system" id="XNA-5g-Gom"/>
+                        <barButtonItem key="leftBarButtonItem" image="location" catalog="system" id="XNA-5g-Gom">
+                            <connections>
+                                <action selector="currentLocatinButton:" destination="BYZ-38-t0r" id="URc-Za-BnB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="findMyLocationBrButton" destination="XNA-5g-Gom" id="3qY-Hs-ZyP"/>
                         <outlet property="mapView" destination="LTH-7d-xmp" id="Bki-QJ-29V"/>
                     </connections>
                 </viewController>
