@@ -31,8 +31,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="vcK-md-HFZ">
                         <barButtonItem key="leftBarButtonItem" image="location" catalog="system" id="XNA-5g-Gom">
+                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="currentLocatinButton:" destination="BYZ-38-t0r" id="URc-Za-BnB"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Begin tracking" id="NGY-4O-2ht">
+                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="beginTrackingButton:" destination="BYZ-38-t0r" id="yhf-Dd-dKD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

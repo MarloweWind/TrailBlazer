@@ -37,6 +37,9 @@ class MapViewController: UIViewController {
     
     @IBAction func currentLocatinButton(_ sender: UIBarButtonItem) {
         locationManager?.requestLocation()
+    }
+    
+    @IBAction func beginTrackingButton(_ sender: UIBarButtonItem) {
         locationManager?.startUpdatingLocation()
     }
     
