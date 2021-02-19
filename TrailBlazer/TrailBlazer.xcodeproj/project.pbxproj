@@ -3,18 +3,22 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		15A591B225DD326500E60816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591B125DD326500E60816 /* AppDelegate.swift */; };
 		15A591B425DD326500E60816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591B325DD326500E60816 /* SceneDelegate.swift */; };
-		15A591B625DD326500E60816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591B525DD326500E60816 /* ViewController.swift */; };
 		15A591B925DD326500E60816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A591B725DD326500E60816 /* Main.storyboard */; };
 		15A591BB25DD326C00E60816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A591BA25DD326C00E60816 /* Assets.xcassets */; };
 		15A591BE25DD326C00E60816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A591BC25DD326C00E60816 /* LaunchScreen.storyboard */; };
 		15A591C925DD326D00E60816 /* TrailBlazerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591C825DD326D00E60816 /* TrailBlazerTests.swift */; };
 		15A591D425DD326D00E60816 /* TrailBlazerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591D325DD326D00E60816 /* TrailBlazerUITests.swift */; };
+		15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591E825DD3BE600E60816 /* MapViewController.swift */; };
+		15A591EB25DD42C200E60816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591EA25DD42C200E60816 /* Constants.swift */; };
+		9C1B96B954CB94ABFEA04BD0 /* Pods_TrailBlazer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9E511DC680F9DDD8F2DE85 /* Pods_TrailBlazer.framework */; };
+		9D6638760911D66112DF610E /* Pods_TrailBlazer_TrailBlazerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0879320A0AB7B9FC2C740B12 /* Pods_TrailBlazer_TrailBlazerUITests.framework */; };
+		F2FBBEF173CD1758D59F8E0B /* Pods_TrailBlazerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D1CE34B59776468312B1E8 /* Pods_TrailBlazerTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,10 +39,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		017102210E75229EC04AA561 /* Pods-TrailBlazerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazerTests.debug.xcconfig"; path = "Target Support Files/Pods-TrailBlazerTests/Pods-TrailBlazerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		0879320A0AB7B9FC2C740B12 /* Pods_TrailBlazer_TrailBlazerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrailBlazer_TrailBlazerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A591AE25DD326500E60816 /* TrailBlazer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailBlazer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A591B125DD326500E60816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15A591B325DD326500E60816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		15A591B525DD326500E60816 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		15A591B825DD326500E60816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		15A591BA25DD326C00E60816 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		15A591BD25DD326C00E60816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +54,15 @@
 		15A591CF25DD326D00E60816 /* TrailBlazerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrailBlazerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A591D325DD326D00E60816 /* TrailBlazerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailBlazerUITests.swift; sourceTree = "<group>"; };
 		15A591D525DD326D00E60816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15A591E825DD3BE600E60816 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		15A591EA25DD42C200E60816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2F32E4E4D57C1B8417D48900 /* Pods-TrailBlazer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer.release.xcconfig"; sourceTree = "<group>"; };
+		489E4F461C68857CC73D3DBF /* Pods-TrailBlazerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazerTests.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazerTests/Pods-TrailBlazerTests.release.xcconfig"; sourceTree = "<group>"; };
+		52D59F641D3F498071E41D09 /* Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6A9E511DC680F9DDD8F2DE85 /* Pods_TrailBlazer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrailBlazer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		91287116AEE706517465FDB4 /* Pods-TrailBlazer-TrailBlazerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer-TrailBlazerUITests.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		94DF7CA3B5C9A323C1D09AB7 /* Pods-TrailBlazer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer.debug.xcconfig"; path = "Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer.debug.xcconfig"; sourceTree = "<group>"; };
+		E5D1CE34B59776468312B1E8 /* Pods_TrailBlazerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrailBlazerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C1B96B954CB94ABFEA04BD0 /* Pods_TrailBlazer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F2FBBEF173CD1758D59F8E0B /* Pods_TrailBlazerTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +86,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D6638760911D66112DF610E /* Pods_TrailBlazer_TrailBlazerUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +100,8 @@
 				15A591C725DD326D00E60816 /* TrailBlazerTests */,
 				15A591D225DD326D00E60816 /* TrailBlazerUITests */,
 				15A591AF25DD326500E60816 /* Products */,
+				3230725CF6A5C095E1EA24BE /* Pods */,
+				D8BB68B958C0122977B7E6A8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,12 +118,10 @@
 		15A591B025DD326500E60816 /* TrailBlazer */ = {
 			isa = PBXGroup;
 			children = (
-				15A591B125DD326500E60816 /* AppDelegate.swift */,
-				15A591B325DD326500E60816 /* SceneDelegate.swift */,
-				15A591B525DD326500E60816 /* ViewController.swift */,
-				15A591B725DD326500E60816 /* Main.storyboard */,
-				15A591BA25DD326C00E60816 /* Assets.xcassets */,
-				15A591BC25DD326C00E60816 /* LaunchScreen.storyboard */,
+				15A591E725DD3BA700E60816 /* BussinessLogic */,
+				15A591E325DD3B6A00E60816 /* App */,
+				15A591E225DD3B5400E60816 /* Core */,
+				15A591E125DD3B2200E60816 /* Resources */,
 				15A591BF25DD326C00E60816 /* Info.plist */,
 			);
 			path = TrailBlazer;
@@ -128,6 +145,88 @@
 			path = TrailBlazerUITests;
 			sourceTree = "<group>";
 		};
+		15A591E125DD3B2200E60816 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				15A591BA25DD326C00E60816 /* Assets.xcassets */,
+				15A591B725DD326500E60816 /* Main.storyboard */,
+				15A591BC25DD326C00E60816 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		15A591E225DD3B5400E60816 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				15A591B125DD326500E60816 /* AppDelegate.swift */,
+				15A591B325DD326500E60816 /* SceneDelegate.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		15A591E325DD3B6A00E60816 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				15A591E625DD3B9600E60816 /* Entity */,
+				15A591E425DD3B7F00E60816 /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		15A591E425DD3B7F00E60816 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				15A591E525DD3B8600E60816 /* MapView */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		15A591E525DD3B8600E60816 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				15A591E825DD3BE600E60816 /* MapViewController.swift */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		15A591E625DD3B9600E60816 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				15A591EA25DD42C200E60816 /* Constants.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		15A591E725DD3BA700E60816 /* BussinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BussinessLogic;
+			sourceTree = "<group>";
+		};
+		3230725CF6A5C095E1EA24BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94DF7CA3B5C9A323C1D09AB7 /* Pods-TrailBlazer.debug.xcconfig */,
+				2F32E4E4D57C1B8417D48900 /* Pods-TrailBlazer.release.xcconfig */,
+				52D59F641D3F498071E41D09 /* Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig */,
+				91287116AEE706517465FDB4 /* Pods-TrailBlazer-TrailBlazerUITests.release.xcconfig */,
+				017102210E75229EC04AA561 /* Pods-TrailBlazerTests.debug.xcconfig */,
+				489E4F461C68857CC73D3DBF /* Pods-TrailBlazerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D8BB68B958C0122977B7E6A8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6A9E511DC680F9DDD8F2DE85 /* Pods_TrailBlazer.framework */,
+				0879320A0AB7B9FC2C740B12 /* Pods_TrailBlazer_TrailBlazerUITests.framework */,
+				E5D1CE34B59776468312B1E8 /* Pods_TrailBlazerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15A591D825DD326D00E60816 /* Build configuration list for PBXNativeTarget "TrailBlazer" */;
 			buildPhases = (
+				4DD5DE6E6EE6CABE9D56C751 /* [CP] Check Pods Manifest.lock */,
 				15A591AA25DD326500E60816 /* Sources */,
 				15A591AB25DD326500E60816 /* Frameworks */,
 				15A591AC25DD326500E60816 /* Resources */,
+				B8DEAFCB0F21B0F650807628 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,6 +253,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15A591DB25DD326D00E60816 /* Build configuration list for PBXNativeTarget "TrailBlazerTests" */;
 			buildPhases = (
+				CC6B64C66DBDDE3A1A902808 /* [CP] Check Pods Manifest.lock */,
 				15A591C025DD326D00E60816 /* Sources */,
 				15A591C125DD326D00E60816 /* Frameworks */,
 				15A591C225DD326D00E60816 /* Resources */,
@@ -170,9 +272,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 15A591DE25DD326D00E60816 /* Build configuration list for PBXNativeTarget "TrailBlazerUITests" */;
 			buildPhases = (
+				AD8E3B8D542F5A36BDB38B0B /* [CP] Check Pods Manifest.lock */,
 				15A591CB25DD326D00E60816 /* Sources */,
 				15A591CC25DD326D00E60816 /* Frameworks */,
 				15A591CD25DD326D00E60816 /* Resources */,
+				57B0A7ACED34C8674FA51A0E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,14 +358,118 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4DD5DE6E6EE6CABE9D56C751 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrailBlazer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57B0A7ACED34C8674FA51A0E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD8E3B8D542F5A36BDB38B0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrailBlazer-TrailBlazerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B8DEAFCB0F21B0F650807628 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC6B64C66DBDDE3A1A902808 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TrailBlazerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		15A591AA25DD326500E60816 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A591B625DD326500E60816 /* ViewController.swift in Sources */,
 				15A591B225DD326500E60816 /* AppDelegate.swift in Sources */,
+				15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */,
 				15A591B425DD326500E60816 /* SceneDelegate.swift in Sources */,
+				15A591EB25DD42C200E60816 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +640,7 @@
 		};
 		15A591D925DD326D00E60816 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94DF7CA3B5C9A323C1D09AB7 /* Pods-TrailBlazer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -450,6 +659,7 @@
 		};
 		15A591DA25DD326D00E60816 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F32E4E4D57C1B8417D48900 /* Pods-TrailBlazer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -468,6 +678,7 @@
 		};
 		15A591DC25DD326D00E60816 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 017102210E75229EC04AA561 /* Pods-TrailBlazerTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +701,7 @@
 		};
 		15A591DD25DD326D00E60816 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 489E4F461C68857CC73D3DBF /* Pods-TrailBlazerTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +724,7 @@
 		};
 		15A591DF25DD326D00E60816 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52D59F641D3F498071E41D09 /* Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +745,7 @@
 		};
 		15A591E025DD326D00E60816 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91287116AEE706517465FDB4 /* Pods-TrailBlazer-TrailBlazerUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
