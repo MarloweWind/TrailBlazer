@@ -44,3 +44,18 @@ class MapViewController: UIViewController {
     }
     
 }
+
+extension MapViewController: CLLocationManagerDelegate {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
+            let marker = GMSMarker(position: location.coordinate)
+            marker.map = mapView
+        }
+    }
+    // TODO: fix it
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print(error)
+    }
+
+}

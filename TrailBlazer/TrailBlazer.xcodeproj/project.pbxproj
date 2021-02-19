@@ -16,7 +16,6 @@
 		15A591D425DD326D00E60816 /* TrailBlazerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591D325DD326D00E60816 /* TrailBlazerUITests.swift */; };
 		15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591E825DD3BE600E60816 /* MapViewController.swift */; };
 		15A591EB25DD42C200E60816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591EA25DD42C200E60816 /* Constants.swift */; };
-		15A591ED25DD56C400E60816 /* MapViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591EC25DD56C400E60816 /* MapViewControllerExt.swift */; };
 		9C1B96B954CB94ABFEA04BD0 /* Pods_TrailBlazer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9E511DC680F9DDD8F2DE85 /* Pods_TrailBlazer.framework */; };
 		9D6638760911D66112DF610E /* Pods_TrailBlazer_TrailBlazerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0879320A0AB7B9FC2C740B12 /* Pods_TrailBlazer_TrailBlazerUITests.framework */; };
 		F2FBBEF173CD1758D59F8E0B /* Pods_TrailBlazerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D1CE34B59776468312B1E8 /* Pods_TrailBlazerTests.framework */; };
@@ -57,7 +56,6 @@
 		15A591D525DD326D00E60816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A591E825DD3BE600E60816 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		15A591EA25DD42C200E60816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		15A591EC25DD56C400E60816 /* MapViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewControllerExt.swift; sourceTree = "<group>"; };
 		2F32E4E4D57C1B8417D48900 /* Pods-TrailBlazer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer.release.xcconfig"; sourceTree = "<group>"; };
 		489E4F461C68857CC73D3DBF /* Pods-TrailBlazerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazerTests.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazerTests/Pods-TrailBlazerTests.release.xcconfig"; sourceTree = "<group>"; };
 		52D59F641D3F498071E41D09 /* Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -187,7 +185,6 @@
 			isa = PBXGroup;
 			children = (
 				15A591E825DD3BE600E60816 /* MapViewController.swift */,
-				15A591EC25DD56C400E60816 /* MapViewControllerExt.swift */,
 			);
 			path = MapView;
 			sourceTree = "<group>";
@@ -470,7 +467,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				15A591B225DD326500E60816 /* AppDelegate.swift in Sources */,
-				15A591ED25DD56C400E60816 /* MapViewControllerExt.swift in Sources */,
 				15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */,
 				15A591B425DD326500E60816 /* SceneDelegate.swift in Sources */,
 				15A591EB25DD42C200E60816 /* Constants.swift in Sources */,
