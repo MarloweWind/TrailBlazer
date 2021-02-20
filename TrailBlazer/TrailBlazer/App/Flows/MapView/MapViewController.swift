@@ -36,14 +36,13 @@ class MapViewController: UIViewController {
         locationManager?.allowsBackgroundLocationUpdates = true
     }
     
-    @IBAction func currentLocatinButton(_ sender: UIBarButtonItem) {
-        locationManager?.requestLocation()
-    }
-    
     @IBAction func beginTrackingButton(_ sender: UIBarButtonItem) {
         locationManager?.startUpdatingLocation()
     }
     
+    @IBAction func endTrackingButton(_ sender: UIBarButtonItem) {
+        locationManager?.stopUpdatingLocation()
+    }
 }
 
 extension MapViewController: CLLocationManagerDelegate {
