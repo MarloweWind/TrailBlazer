@@ -33,6 +33,7 @@ class MapViewController: UIViewController {
         locationManager?.delegate = self
         locationManager?.requestWhenInUseAuthorization()
         locationManager?.requestAlwaysAuthorization()
+        locationManager?.allowsBackgroundLocationUpdates = true
     }
     
     @IBAction func currentLocatinButton(_ sender: UIBarButtonItem) {
@@ -51,11 +52,12 @@ extension MapViewController: CLLocationManagerDelegate {
             mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
             let marker = GMSMarker(position: location.coordinate)
             marker.map = mapView
+            print(location.coordinate)
         }
     }
-    // TODO: fix it
+
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
+        print(error.localizedDescription)
     }
 
 }

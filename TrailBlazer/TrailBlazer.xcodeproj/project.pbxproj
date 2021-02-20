@@ -239,6 +239,7 @@
 				15A591AB25DD326500E60816 /* Frameworks */,
 				15A591AC25DD326500E60816 /* Resources */,
 				B8DEAFCB0F21B0F650807628 /* [CP] Copy Pods Resources */,
+				AFE696951D5FCD802F4C1D82 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,6 +278,7 @@
 				15A591CC25DD326D00E60816 /* Frameworks */,
 				15A591CD25DD326D00E60816 /* Resources */,
 				57B0A7ACED34C8674FA51A0E /* [CP] Copy Pods Resources */,
+				2E9D8BDFCCE7D7EA357C7F62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,6 +361,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2E9D8BDFCCE7D7EA357C7F62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4DD5DE6E6EE6CABE9D56C751 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +437,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AFE696951D5FCD802F4C1D82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B8DEAFCB0F21B0F650807628 /* [CP] Copy Pods Resources */ = {
