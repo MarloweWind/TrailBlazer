@@ -15,6 +15,13 @@ class MapViewController: UIViewController {
     @IBOutlet weak var mapView: GMSMapView!
     
     var locationManager: CLLocationManager?
+    var route: GMSPolyline?{
+        didSet{
+            route?.strokeWidth = 5
+            route?.strokeColor = .systemGreen
+        }
+    }
+    var routePath: GMSMutablePath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +44,10 @@ class MapViewController: UIViewController {
     }
     
     @IBAction func beginTrackingButton(_ sender: UIBarButtonItem) {
+        route?.map = nil
+        route = GMSPolyline()
+        routePath = GMSMutablePath()
+        route?.map = mapView
         locationManager?.startUpdatingLocation()
     }
     
@@ -47,12 +58,12 @@ class MapViewController: UIViewController {
 
 extension MapViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.first {
-            mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-            let marker = GMSMarker(position: location.coordinate)
-            marker.map = mapView
-            print(location.coordinate)
-        }
+        guard let location = locations.last else { return }
+        routePath?.add(location.coordinate)
+        route?.path = routePath
+        let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 15)
+        mapView.animate(to: position)
+        print(location.coordinate)
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
