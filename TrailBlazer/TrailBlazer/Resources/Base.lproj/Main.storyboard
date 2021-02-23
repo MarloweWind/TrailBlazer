@@ -36,12 +36,20 @@
                                 <action selector="beginTrackingButton:" destination="BYZ-38-t0r" id="yhf-Dd-dKD"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="End tracking" id="cBz-TN-uga">
-                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="endTrackingButton:" destination="BYZ-38-t0r" id="RB9-9s-DTc"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="End tracking" id="cBz-TN-uga">
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="endTrackingButton:" destination="BYZ-38-t0r" id="RB9-9s-DTc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Track history" id="dbH-Tc-Rp7">
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="trackHistoryButton:" destination="BYZ-38-t0r" id="NiZ-dU-LCY"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="LTH-7d-xmp" id="Bki-QJ-29V"/>
