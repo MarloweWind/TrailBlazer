@@ -16,6 +16,7 @@
 		15A591D425DD326D00E60816 /* TrailBlazerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591D325DD326D00E60816 /* TrailBlazerUITests.swift */; };
 		15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591E825DD3BE600E60816 /* MapViewController.swift */; };
 		15A591EB25DD42C200E60816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591EA25DD42C200E60816 /* Constants.swift */; };
+		15D1A64425E3C08F000DE176 /* TrackHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1A64325E3C08F000DE176 /* TrackHistory.swift */; };
 		9C1B96B954CB94ABFEA04BD0 /* Pods_TrailBlazer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9E511DC680F9DDD8F2DE85 /* Pods_TrailBlazer.framework */; };
 		9D6638760911D66112DF610E /* Pods_TrailBlazer_TrailBlazerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0879320A0AB7B9FC2C740B12 /* Pods_TrailBlazer_TrailBlazerUITests.framework */; };
 		F2FBBEF173CD1758D59F8E0B /* Pods_TrailBlazerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5D1CE34B59776468312B1E8 /* Pods_TrailBlazerTests.framework */; };
@@ -56,6 +57,7 @@
 		15A591D525DD326D00E60816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A591E825DD3BE600E60816 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		15A591EA25DD42C200E60816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		15D1A64325E3C08F000DE176 /* TrackHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHistory.swift; sourceTree = "<group>"; };
 		2F32E4E4D57C1B8417D48900 /* Pods-TrailBlazer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer.release.xcconfig"; sourceTree = "<group>"; };
 		489E4F461C68857CC73D3DBF /* Pods-TrailBlazerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazerTests.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazerTests/Pods-TrailBlazerTests.release.xcconfig"; sourceTree = "<group>"; };
 		52D59F641D3F498071E41D09 /* Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig"; path = "Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 			isa = PBXGroup;
 			children = (
 				15A591EA25DD42C200E60816 /* Constants.swift */,
+				15D1A64325E3C08F000DE176 /* TrackHistory.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				15A591AB25DD326500E60816 /* Frameworks */,
 				15A591AC25DD326500E60816 /* Resources */,
 				B8DEAFCB0F21B0F650807628 /* [CP] Copy Pods Resources */,
+				AFE696951D5FCD802F4C1D82 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -277,6 +281,7 @@
 				15A591CC25DD326D00E60816 /* Frameworks */,
 				15A591CD25DD326D00E60816 /* Resources */,
 				57B0A7ACED34C8674FA51A0E /* [CP] Copy Pods Resources */,
+				2E9D8BDFCCE7D7EA357C7F62 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -359,6 +364,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		2E9D8BDFCCE7D7EA357C7F62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer-TrailBlazerUITests/Pods-TrailBlazer-TrailBlazerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4DD5DE6E6EE6CABE9D56C751 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -420,6 +442,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		AFE696951D5FCD802F4C1D82 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B8DEAFCB0F21B0F650807628 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -468,6 +507,7 @@
 			files = (
 				15A591B225DD326500E60816 /* AppDelegate.swift in Sources */,
 				15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */,
+				15D1A64425E3C08F000DE176 /* TrackHistory.swift in Sources */,
 				15A591B425DD326500E60816 /* SceneDelegate.swift in Sources */,
 				15A591EB25DD42C200E60816 /* Constants.swift in Sources */,
 			);

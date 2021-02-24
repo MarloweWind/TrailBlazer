@@ -30,18 +30,26 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="vcK-md-HFZ">
-                        <barButtonItem key="leftBarButtonItem" image="location" catalog="system" springLoaded="YES" id="XNA-5g-Gom">
-                            <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <connections>
-                                <action selector="currentLocatinButton:" destination="BYZ-38-t0r" id="URc-Za-BnB"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Begin tracking" id="NGY-4O-2ht">
+                        <barButtonItem key="leftBarButtonItem" title="Begin tracking" id="NGY-4O-2ht">
                             <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="beginTrackingButton:" destination="BYZ-38-t0r" id="yhf-Dd-dKD"/>
                             </connections>
                         </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="End tracking" id="cBz-TN-uga">
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="endTrackingButton:" destination="BYZ-38-t0r" id="RB9-9s-DTc"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Track history" id="dbH-Tc-Rp7">
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <connections>
+                                    <action selector="trackHistoryButton:" destination="BYZ-38-t0r" id="NiZ-dU-LCY"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="LTH-7d-xmp" id="Bki-QJ-29V"/>
@@ -70,7 +78,4 @@
             <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="location" catalog="system" width="128" height="115"/>
-    </resources>
 </document>
