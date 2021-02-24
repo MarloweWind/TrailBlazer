@@ -104,7 +104,6 @@ extension MapViewController: CLLocationManagerDelegate {
         route?.path = routePath
         let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 15)
         mapView.animate(to: position)
-        print(location.coordinate)
     }
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
