@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class LoginViewController: UIViewController {
     
@@ -15,17 +16,59 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func loginButton(_ sender: UIButton) {
+        guard let login = loginTextField.text, let password = passwordTextField.text else {return}
         
+        do {
+            let realm = try Realm()
+            let path = realm.objects(User.self).filter("login == %@", login)
+            if path.isEmpty {
+                self.showAlert("Incorrect username")
+            } else {
+                if path[0].password == password {
+                    self.login()
+                } else {
+                    self.showAlert("Incorrect password")
+                }
+            }
+        } catch {
+            print(error)
+        }
     }
-    
     
     @IBAction func registerButton(_ sender: UIButton) {
+        guard let login = loginTextField.text, let password = passwordTextField.text else {return}
         
+        do {
+            let realm = try Realm()
+            let path = realm.objects(User.self).filter("login == %@", login)
+            realm.beginWrite()
+            if path.isEmpty {
+                let newUser = User()
+                newUser.login = login
+                newUser.password = password
+                realm.add(newUser)
+                self.login()
+            } else {
+                path[0].password = password
+                self.login()
+            }
+            try realm.commitWrite()
+        } catch {
+            print(error)
+        }
     }
     
+    private func login() {
+        self.performSegue(withIdentifier: "loginToMap", sender: nil)
+    }
+    
+    private func showAlert(_ text: String) {
+        let alert = UIAlertController(title: "", message: text, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ок", style: .default, handler: nil))
+        self.present(alert, animated: true)
+    }
 
 }
