@@ -28,7 +28,7 @@ class LoginViewController: UIViewController {
                 self.showAlert("Incorrect username")
             } else {
                 if path[0].password == password {
-                    self.login()
+                    self.loginAction()
                 } else {
                     self.showAlert("Incorrect password")
                 }
@@ -50,10 +50,10 @@ class LoginViewController: UIViewController {
                 newUser.login = login
                 newUser.password = password
                 realm.add(newUser)
-                self.login()
+                self.loginAction()
             } else {
                 path[0].password = password
-                self.login()
+                self.loginAction()
             }
             try realm.commitWrite()
         } catch {
@@ -61,8 +61,11 @@ class LoginViewController: UIViewController {
         }
     }
     
-    private func login() {
-        self.performSegue(withIdentifier: "loginToMap", sender: nil)
+    private func loginAction() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(identifier: "MapViewController")
+        vc.modalPresentationStyle = .fullScreen
+        self.show(vc, sender: nil)
     }
     
     private func showAlert(_ text: String) {
