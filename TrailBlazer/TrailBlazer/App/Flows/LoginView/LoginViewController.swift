@@ -14,15 +14,18 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    var router: BaseRouter!
+    let realm = try! Realm()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        router = BaseRouter(viewController: self)
     }
 
     @IBAction func loginButton(_ sender: UIButton) {
         guard let login = loginTextField.text, let password = passwordTextField.text else {return}
         
         do {
-            let realm = try Realm()
             let path = realm.objects(User.self).filter("login == %@", login)
             if path.isEmpty {
                 self.showAlert("Incorrect username")
@@ -33,8 +36,6 @@ class LoginViewController: UIViewController {
                     self.showAlert("Incorrect password")
                 }
             }
-        } catch {
-            print(error)
         }
     }
     
@@ -42,7 +43,6 @@ class LoginViewController: UIViewController {
         guard let login = loginTextField.text, let password = passwordTextField.text else {return}
         
         do {
-            let realm = try Realm()
             let path = realm.objects(User.self).filter("login == %@", login)
             realm.beginWrite()
             if path.isEmpty {
@@ -63,9 +63,8 @@ class LoginViewController: UIViewController {
     
     private func loginAction() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "MapViewController")
-        vc.modalPresentationStyle = .fullScreen
-        self.show(vc, sender: nil)
+        let destinationVC = storyboard.instantiateViewController(identifier: "MapViewController")
+        router.push(vc: destinationVC)
     }
     
     private func showAlert(_ text: String) {

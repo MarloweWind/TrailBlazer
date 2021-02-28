@@ -18,6 +18,7 @@
 		15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591E825DD3BE600E60816 /* MapViewController.swift */; };
 		15A591EB25DD42C200E60816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591EA25DD42C200E60816 /* Constants.swift */; };
 		15AFCF3625E690310044F518 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFCF3525E690310044F518 /* LoginViewController.swift */; };
+		15BB7FAF25EB8B4300AC41C5 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB7FAE25EB8B4300AC41C5 /* BaseRouter.swift */; };
 		15D1A64425E3C08F000DE176 /* TrackHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1A64325E3C08F000DE176 /* TrackHistory.swift */; };
 		9C1B96B954CB94ABFEA04BD0 /* Pods_TrailBlazer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9E511DC680F9DDD8F2DE85 /* Pods_TrailBlazer.framework */; };
 		9D6638760911D66112DF610E /* Pods_TrailBlazer_TrailBlazerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0879320A0AB7B9FC2C740B12 /* Pods_TrailBlazer_TrailBlazerUITests.framework */; };
@@ -61,6 +62,7 @@
 		15A591E825DD3BE600E60816 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		15A591EA25DD42C200E60816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15AFCF3525E690310044F518 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		15BB7FAE25EB8B4300AC41C5 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		15D1A64325E3C08F000DE176 /* TrackHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHistory.swift; sourceTree = "<group>"; };
 		2F32E4E4D57C1B8417D48900 /* Pods-TrailBlazer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer.release.xcconfig"; sourceTree = "<group>"; };
 		489E4F461C68857CC73D3DBF /* Pods-TrailBlazerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazerTests.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazerTests/Pods-TrailBlazerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 		15A591B025DD326500E60816 /* TrailBlazer */ = {
 			isa = PBXGroup;
 			children = (
+				15BB7FAD25EB8B2B00AC41C5 /* Service */,
 				15A591E725DD3BA700E60816 /* BussinessLogic */,
 				15A591E325DD3B6A00E60816 /* App */,
 				15A591E225DD3B5400E60816 /* Core */,
@@ -219,6 +222,14 @@
 				15AFCF3525E690310044F518 /* LoginViewController.swift */,
 			);
 			path = LoginView;
+			sourceTree = "<group>";
+		};
+		15BB7FAD25EB8B2B00AC41C5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				15BB7FAE25EB8B4300AC41C5 /* BaseRouter.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3230725CF6A5C095E1EA24BE /* Pods */ = {
@@ -526,6 +537,7 @@
 				15D1A64425E3C08F000DE176 /* TrackHistory.swift in Sources */,
 				15A591B425DD326500E60816 /* SceneDelegate.swift in Sources */,
 				15A591EB25DD42C200E60816 /* Constants.swift in Sources */,
+				15BB7FAF25EB8B4300AC41C5 /* BaseRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
