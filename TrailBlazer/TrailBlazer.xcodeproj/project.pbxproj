@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1508656425E678450025497D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1508656325E678450025497D /* User.swift */; };
 		15A591B225DD326500E60816 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591B125DD326500E60816 /* AppDelegate.swift */; };
 		15A591B425DD326500E60816 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591B325DD326500E60816 /* SceneDelegate.swift */; };
 		15A591B925DD326500E60816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A591B725DD326500E60816 /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 		15A591D425DD326D00E60816 /* TrailBlazerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591D325DD326D00E60816 /* TrailBlazerUITests.swift */; };
 		15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591E825DD3BE600E60816 /* MapViewController.swift */; };
 		15A591EB25DD42C200E60816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591EA25DD42C200E60816 /* Constants.swift */; };
+		15AFCF3625E690310044F518 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFCF3525E690310044F518 /* LoginViewController.swift */; };
+		15BB7FAF25EB8B4300AC41C5 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BB7FAE25EB8B4300AC41C5 /* BaseRouter.swift */; };
 		15D1A64425E3C08F000DE176 /* TrackHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15D1A64325E3C08F000DE176 /* TrackHistory.swift */; };
 		9C1B96B954CB94ABFEA04BD0 /* Pods_TrailBlazer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A9E511DC680F9DDD8F2DE85 /* Pods_TrailBlazer.framework */; };
 		9D6638760911D66112DF610E /* Pods_TrailBlazer_TrailBlazerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0879320A0AB7B9FC2C740B12 /* Pods_TrailBlazer_TrailBlazerUITests.framework */; };
@@ -42,6 +45,7 @@
 /* Begin PBXFileReference section */
 		017102210E75229EC04AA561 /* Pods-TrailBlazerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazerTests.debug.xcconfig"; path = "Target Support Files/Pods-TrailBlazerTests/Pods-TrailBlazerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		0879320A0AB7B9FC2C740B12 /* Pods_TrailBlazer_TrailBlazerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TrailBlazer_TrailBlazerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1508656325E678450025497D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		15A591AE25DD326500E60816 /* TrailBlazer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TrailBlazer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15A591B125DD326500E60816 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		15A591B325DD326500E60816 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 		15A591D525DD326D00E60816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A591E825DD3BE600E60816 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		15A591EA25DD42C200E60816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		15AFCF3525E690310044F518 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		15BB7FAE25EB8B4300AC41C5 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		15D1A64325E3C08F000DE176 /* TrackHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackHistory.swift; sourceTree = "<group>"; };
 		2F32E4E4D57C1B8417D48900 /* Pods-TrailBlazer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazer.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazer/Pods-TrailBlazer.release.xcconfig"; sourceTree = "<group>"; };
 		489E4F461C68857CC73D3DBF /* Pods-TrailBlazerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TrailBlazerTests.release.xcconfig"; path = "Target Support Files/Pods-TrailBlazerTests/Pods-TrailBlazerTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +126,7 @@
 		15A591B025DD326500E60816 /* TrailBlazer */ = {
 			isa = PBXGroup;
 			children = (
+				15BB7FAD25EB8B2B00AC41C5 /* Service */,
 				15A591E725DD3BA700E60816 /* BussinessLogic */,
 				15A591E325DD3B6A00E60816 /* App */,
 				15A591E225DD3B5400E60816 /* Core */,
@@ -178,6 +185,7 @@
 		15A591E425DD3B7F00E60816 /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				15AFCF3425E690170044F518 /* LoginView */,
 				15A591E525DD3B8600E60816 /* MapView */,
 			);
 			path = Flows;
@@ -196,6 +204,7 @@
 			children = (
 				15A591EA25DD42C200E60816 /* Constants.swift */,
 				15D1A64325E3C08F000DE176 /* TrackHistory.swift */,
+				1508656325E678450025497D /* User.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -205,6 +214,22 @@
 			children = (
 			);
 			path = BussinessLogic;
+			sourceTree = "<group>";
+		};
+		15AFCF3425E690170044F518 /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				15AFCF3525E690310044F518 /* LoginViewController.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		15BB7FAD25EB8B2B00AC41C5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				15BB7FAE25EB8B4300AC41C5 /* BaseRouter.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		3230725CF6A5C095E1EA24BE /* Pods */ = {
@@ -505,11 +530,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15AFCF3625E690310044F518 /* LoginViewController.swift in Sources */,
 				15A591B225DD326500E60816 /* AppDelegate.swift in Sources */,
 				15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */,
+				1508656425E678450025497D /* User.swift in Sources */,
 				15D1A64425E3C08F000DE176 /* TrackHistory.swift in Sources */,
 				15A591B425DD326500E60816 /* SceneDelegate.swift in Sources */,
 				15A591EB25DD42C200E60816 /* Constants.swift in Sources */,
+				15BB7FAF25EB8B4300AC41C5 /* BaseRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

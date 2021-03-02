@@ -7,16 +7,81 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="PbV-4l-oOK">
+            <objects>
+                <viewController id="abu-6H-PXE" customClass="LoginViewController" customModule="TrailBlazer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="g2u-mV-LHH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Yr-2l-P0L">
+                                <rect key="frame" x="120" y="458" width="174" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" secureTextEntry="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tyy-xp-L7I">
+                                <rect key="frame" x="150" y="512" width="114" height="30"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="abu-6H-PXE" eventType="touchUpInside" id="Fqc-Yl-3zn"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSM-zG-yAA">
+                                <rect key="frame" x="150" y="562" width="114" height="30"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButton:" destination="abu-6H-PXE" eventType="touchUpInside" id="m5j-UY-Bzr"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Login" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Evs-JM-MPv">
+                                <rect key="frame" x="120" y="404" width="174" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2Yr-2l-P0L" firstAttribute="centerX" secondItem="eKk-ev-Vn2" secondAttribute="centerX" id="3fu-5r-rV9"/>
+                            <constraint firstItem="eKk-ev-Vn2" firstAttribute="trailing" secondItem="2Yr-2l-P0L" secondAttribute="trailing" constant="120" id="91H-XH-UdK"/>
+                            <constraint firstItem="eKk-ev-Vn2" firstAttribute="trailing" secondItem="Tyy-xp-L7I" secondAttribute="trailing" constant="150" id="AYY-Bp-4lU"/>
+                            <constraint firstItem="Tyy-xp-L7I" firstAttribute="top" secondItem="2Yr-2l-P0L" secondAttribute="bottom" constant="20" id="AhR-zI-5dp"/>
+                            <constraint firstItem="eKk-ev-Vn2" firstAttribute="trailing" secondItem="Evs-JM-MPv" secondAttribute="trailing" constant="120" id="CkA-yZ-VRf"/>
+                            <constraint firstItem="2Yr-2l-P0L" firstAttribute="top" secondItem="Evs-JM-MPv" secondAttribute="bottom" constant="20" id="MPk-n6-aaK"/>
+                            <constraint firstItem="Tyy-xp-L7I" firstAttribute="leading" secondItem="eKk-ev-Vn2" secondAttribute="leading" constant="150" id="Nrk-Qg-Szd"/>
+                            <constraint firstItem="2Yr-2l-P0L" firstAttribute="leading" secondItem="eKk-ev-Vn2" secondAttribute="leading" constant="120" id="OMG-el-YYp"/>
+                            <constraint firstItem="eKk-ev-Vn2" firstAttribute="trailing" secondItem="JSM-zG-yAA" secondAttribute="trailing" constant="150" id="Rlz-DV-B5a"/>
+                            <constraint firstItem="2Yr-2l-P0L" firstAttribute="centerY" secondItem="eKk-ev-Vn2" secondAttribute="centerY" id="ZK1-x3-Rrj"/>
+                            <constraint firstItem="JSM-zG-yAA" firstAttribute="top" secondItem="Tyy-xp-L7I" secondAttribute="bottom" constant="20" id="joe-Qe-rQD"/>
+                            <constraint firstItem="Evs-JM-MPv" firstAttribute="leading" secondItem="eKk-ev-Vn2" secondAttribute="leading" constant="120" id="tV6-Vq-MXt"/>
+                            <constraint firstItem="JSM-zG-yAA" firstAttribute="leading" secondItem="eKk-ev-Vn2" secondAttribute="leading" constant="150" id="tkW-2D-j1l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eKk-ev-Vn2"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tLv-QG-PMi"/>
+                    <connections>
+                        <outlet property="loginTextField" destination="Evs-JM-MPv" id="SPA-Q0-liL"/>
+                        <outlet property="passwordTextField" destination="2Yr-2l-P0L" id="7Cn-2r-vyX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gTs-8d-eZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="404" y="92"/>
+        </scene>
         <!--Map View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MapViewController" customModule="TrailBlazer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MapViewController" id="BYZ-38-t0r" customClass="MapViewController" customModule="TrailBlazer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LTH-7d-xmp" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -57,7 +122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="92.410714285714278"/>
+            <point key="canvasLocation" x="1207" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="jjN-lA-O3C">
@@ -70,12 +135,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Idn-tA-3dJ"/>
+                        <segue destination="abu-6H-PXE" kind="relationship" relationship="rootViewController" id="J46-2j-49k"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oj-so-5KG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="92.410714285714278"/>
+            <point key="canvasLocation" x="-348" y="92"/>
         </scene>
     </scenes>
 </document>
