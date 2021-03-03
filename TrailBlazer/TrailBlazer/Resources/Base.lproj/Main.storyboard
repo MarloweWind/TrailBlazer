@@ -64,8 +64,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="tLv-QG-PMi"/>
                     <connections>
+                        <outlet property="loginButtonOutlet" destination="Tyy-xp-L7I" id="6kn-92-LRx"/>
                         <outlet property="loginTextField" destination="Evs-JM-MPv" id="SPA-Q0-liL"/>
                         <outlet property="passwordTextField" destination="2Yr-2l-P0L" id="7Cn-2r-vyX"/>
+                        <outlet property="registerButtonOutlet" destination="JSM-zG-yAA" id="jne-Y1-n7L"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTs-8d-eZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

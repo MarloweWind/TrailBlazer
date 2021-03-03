@@ -8,11 +8,15 @@
 
 import UIKit
 import RealmSwift
+import RxSwift
+import RxCocoa
 
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButtonOutlet: UIButton!
+    @IBOutlet weak var registerButtonOutlet: UIButton!
     
     var router: BaseRouter!
     let realm = try! Realm()
@@ -20,21 +24,37 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         router = BaseRouter(viewController: self)
+        loginButtonOutlet?.isEnabled = false
+        registerButtonOutlet?.isEnabled = false
+        configureLogin()
     }
+    
+    func configureLogin() {
+            Observable
+                .combineLatest(
+                    loginTextField.rx.text,
+                    passwordTextField.rx.text
+                )
+                .map { login, password in
+                    return !(login ?? "").isEmpty && (password ?? "").count >= 1
+                }
+                .bind { [weak loginButtonOutlet, weak registerButtonOutlet] inputFilled in
+                    loginButtonOutlet?.isEnabled = inputFilled
+                    registerButtonOutlet?.isEnabled = inputFilled
+            }
+        }
 
     @IBAction func loginButton(_ sender: UIButton) {
         guard let login = loginTextField.text, let password = passwordTextField.text else {return}
         
-        do {
-            let path = realm.objects(User.self).filter("login == %@", login)
-            if path.isEmpty {
-                self.showAlert("Incorrect username")
+        let path = realm.objects(User.self).filter("login == %@", login)
+        if path.isEmpty {
+            self.showAlert("Incorrect username")
+        } else {
+            if path[0].password == password {
+                self.loginAction()
             } else {
-                if path[0].password == password {
-                    self.loginAction()
-                } else {
-                    self.showAlert("Incorrect password")
-                }
+                self.showAlert("Incorrect password")
             }
         }
     }
