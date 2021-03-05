@@ -15,7 +15,7 @@ class MapViewController: UIViewController {
 
     @IBOutlet weak var mapView: GMSMapView!
     
-    var locationManager: CLLocationManager?
+    let locationManager = LocationManager.instance
     var route: GMSPolyline?{
         didSet{
             route?.strokeWidth = 5
@@ -37,21 +37,21 @@ class MapViewController: UIViewController {
         } catch {
             print(error)
         }
-        
-        startConfigure()
-        configureLocationManager()
-    }
 
-    func startConfigure(){
-        let camera = GMSCameraPosition.camera(withTarget: startLocation, zoom: 10)
-        mapView.camera = camera
+        configureLocationManager()
     }
     
     func configureLocationManager(){
-        locationManager = CLLocationManager()
-        locationManager?.delegate = self
-        locationManager?.requestAlwaysAuthorization()
-        locationManager?.allowsBackgroundLocationUpdates = true
+        locationManager
+            .location
+            .asObservable()
+            .bind { [weak self] location in
+                guard let location = location else { return }
+                self?.routePath?.add(location.coordinate)
+                self?.route?.path = self?.routePath
+                let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
+                self?.mapView.animate(to: position)
+        }
     }
     
     @IBAction func beginTrackingButton(_ sender: UIBarButtonItem) {
@@ -59,11 +59,11 @@ class MapViewController: UIViewController {
         route = GMSPolyline()
         routePath = GMSMutablePath()
         route?.map = mapView
-        locationManager?.startUpdatingLocation()
+        locationManager.startUpdatingLocation()
     }
     
     @IBAction func endTrackingButton(_ sender: UIBarButtonItem) {
-        locationManager?.stopUpdatingLocation()
+        locationManager.stopUpdatingLocation()
         route?.map = nil
         routePath = nil
         do {
@@ -82,6 +82,7 @@ class MapViewController: UIViewController {
         } catch {
             print(error)
         }
+        locationManager.stopUpdatingLocation()
     }
     
     @IBAction func trackHistoryButton(_ sender: UIBarButtonItem) {
@@ -95,19 +96,4 @@ class MapViewController: UIViewController {
         }
     }
     
-}
-
-extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        routePath?.add(location.coordinate)
-        route?.path = routePath
-        let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 15)
-        mapView.animate(to: position)
-    }
-
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error.localizedDescription)
-    }
-
 }

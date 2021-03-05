@@ -8,6 +8,8 @@ target 'TrailBlazer' do
   # Pods for TrailBlazer
   pod 'GoogleMaps'
   pod 'RealmSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   target 'TrailBlazerTests' do
     inherit! :search_paths
     # Pods for testing
