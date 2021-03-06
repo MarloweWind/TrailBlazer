@@ -38,7 +38,13 @@ class MapViewController: UIViewController {
             print(error)
         }
 
+        startConfigure()
         configureLocationManager()
+    }
+    
+    func startConfigure(){
+        let camera = GMSCameraPosition.camera(withTarget: startLocation, zoom: 10)
+        mapView.camera = camera
     }
     
     func configureLocationManager(){
