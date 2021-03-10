@@ -14,8 +14,6 @@
 		15A591B925DD326500E60816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A591B725DD326500E60816 /* Main.storyboard */; };
 		15A591BB25DD326C00E60816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 15A591BA25DD326C00E60816 /* Assets.xcassets */; };
 		15A591BE25DD326C00E60816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 15A591BC25DD326C00E60816 /* LaunchScreen.storyboard */; };
-		15A591C925DD326D00E60816 /* TrailBlazerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591C825DD326D00E60816 /* TrailBlazerTests.swift */; };
-		15A591D425DD326D00E60816 /* TrailBlazerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591D325DD326D00E60816 /* TrailBlazerUITests.swift */; };
 		15A591E925DD3BE600E60816 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591E825DD3BE600E60816 /* MapViewController.swift */; };
 		15A591EB25DD42C200E60816 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A591EA25DD42C200E60816 /* Constants.swift */; };
 		15AFCF3625E690310044F518 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AFCF3525E690310044F518 /* LoginViewController.swift */; };
@@ -56,11 +54,7 @@
 		15A591BD25DD326C00E60816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		15A591BF25DD326C00E60816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A591C425DD326D00E60816 /* TrailBlazerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrailBlazerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		15A591C825DD326D00E60816 /* TrailBlazerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailBlazerTests.swift; sourceTree = "<group>"; };
-		15A591CA25DD326D00E60816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A591CF25DD326D00E60816 /* TrailBlazerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TrailBlazerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		15A591D325DD326D00E60816 /* TrailBlazerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailBlazerUITests.swift; sourceTree = "<group>"; };
-		15A591D525DD326D00E60816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		15A591E825DD3BE600E60816 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		15A591EA25DD42C200E60816 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		15AFCF3525E690310044F518 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -107,8 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				15A591B025DD326500E60816 /* TrailBlazer */,
-				15A591C725DD326D00E60816 /* TrailBlazerTests */,
-				15A591D225DD326D00E60816 /* TrailBlazerUITests */,
 				15A591AF25DD326500E60816 /* Products */,
 				3230725CF6A5C095E1EA24BE /* Pods */,
 				D8BB68B958C0122977B7E6A8 /* Frameworks */,
@@ -136,24 +128,6 @@
 				15A591BF25DD326C00E60816 /* Info.plist */,
 			);
 			path = TrailBlazer;
-			sourceTree = "<group>";
-		};
-		15A591C725DD326D00E60816 /* TrailBlazerTests */ = {
-			isa = PBXGroup;
-			children = (
-				15A591C825DD326D00E60816 /* TrailBlazerTests.swift */,
-				15A591CA25DD326D00E60816 /* Info.plist */,
-			);
-			path = TrailBlazerTests;
-			sourceTree = "<group>";
-		};
-		15A591D225DD326D00E60816 /* TrailBlazerUITests */ = {
-			isa = PBXGroup;
-			children = (
-				15A591D325DD326D00E60816 /* TrailBlazerUITests.swift */,
-				15A591D525DD326D00E60816 /* Info.plist */,
-			);
-			path = TrailBlazerUITests;
 			sourceTree = "<group>";
 		};
 		15A591E125DD3B2200E60816 /* Resources */ = {
@@ -549,7 +523,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A591C925DD326D00E60816 /* TrailBlazerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,7 +530,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A591D425DD326D00E60816 /* TrailBlazerUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
