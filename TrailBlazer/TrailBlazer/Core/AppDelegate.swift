@@ -16,6 +16,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey(apiKey)
         
+        let center = UNUserNotificationCenter.current()
+        center.getNotificationSettings{ settings in
+            switch settings.authorizationStatus{
+            case .authorized:
+                print("Allowed")
+            case .denied:
+                print("Denied")
+            default:
+                center.requestAuthorization(options: [.alert, .sound, .badge]){ granted, error in
+                    if granted{
+                        print("User allowed")
+                    } else {
+                        print("User denied")
+                    }
+                }
+            }
+        }
+        
         return true
     }
 
