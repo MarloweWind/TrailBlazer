@@ -43,6 +43,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tv-vU-l2J">
+                                <rect key="frame" x="148" y="612" width="118" height="30"/>
+                                <state key="normal" title="Make your avatar">
+                                    <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="abu-6H-PXE" eventType="touchUpInside" id="cV2-ql-jCd"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -51,11 +60,13 @@
                             <constraint firstItem="eKk-ev-Vn2" firstAttribute="trailing" secondItem="Tyy-xp-L7I" secondAttribute="trailing" constant="150" id="AYY-Bp-4lU"/>
                             <constraint firstItem="Tyy-xp-L7I" firstAttribute="top" secondItem="2Yr-2l-P0L" secondAttribute="bottom" constant="20" id="AhR-zI-5dp"/>
                             <constraint firstItem="eKk-ev-Vn2" firstAttribute="trailing" secondItem="Evs-JM-MPv" secondAttribute="trailing" constant="120" id="CkA-yZ-VRf"/>
+                            <constraint firstItem="5tv-vU-l2J" firstAttribute="centerX" secondItem="eKk-ev-Vn2" secondAttribute="centerX" id="FES-w1-TC5"/>
                             <constraint firstItem="2Yr-2l-P0L" firstAttribute="top" secondItem="Evs-JM-MPv" secondAttribute="bottom" constant="20" id="MPk-n6-aaK"/>
                             <constraint firstItem="Tyy-xp-L7I" firstAttribute="leading" secondItem="eKk-ev-Vn2" secondAttribute="leading" constant="150" id="Nrk-Qg-Szd"/>
                             <constraint firstItem="2Yr-2l-P0L" firstAttribute="leading" secondItem="eKk-ev-Vn2" secondAttribute="leading" constant="120" id="OMG-el-YYp"/>
                             <constraint firstItem="eKk-ev-Vn2" firstAttribute="trailing" secondItem="JSM-zG-yAA" secondAttribute="trailing" constant="150" id="Rlz-DV-B5a"/>
                             <constraint firstItem="2Yr-2l-P0L" firstAttribute="centerY" secondItem="eKk-ev-Vn2" secondAttribute="centerY" id="ZK1-x3-Rrj"/>
+                            <constraint firstItem="5tv-vU-l2J" firstAttribute="top" secondItem="JSM-zG-yAA" secondAttribute="bottom" constant="20" id="jca-xs-dKo"/>
                             <constraint firstItem="JSM-zG-yAA" firstAttribute="top" secondItem="Tyy-xp-L7I" secondAttribute="bottom" constant="20" id="joe-Qe-rQD"/>
                             <constraint firstItem="Evs-JM-MPv" firstAttribute="leading" secondItem="eKk-ev-Vn2" secondAttribute="leading" constant="120" id="tV6-Vq-MXt"/>
                             <constraint firstItem="JSM-zG-yAA" firstAttribute="leading" secondItem="eKk-ev-Vn2" secondAttribute="leading" constant="150" id="tkW-2D-j1l"/>

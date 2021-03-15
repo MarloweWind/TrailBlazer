@@ -24,6 +24,8 @@ class MapViewController: UIViewController {
     }
     var routePath: GMSMutablePath?
     var previousPath: GMSMutablePath?
+    var marker: GMSMarker?
+    var passedImage: UIImage? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +59,14 @@ class MapViewController: UIViewController {
                 self?.route?.path = self?.routePath
                 let position = GMSCameraPosition.camera(withTarget: location.coordinate, zoom: 17)
                 self?.mapView.animate(to: position)
+                if self?.marker != nil {
+                    self?.marker!.map = nil
+                }
+                self?.marker = GMSMarker(position: location.coordinate)
+                if let image = self?.passedImage {
+                    self?.marker!.icon =  self?.setMarkerAvatar(pickedImage: image, image: GMSMarker.markerImage(with: .red))
+                }
+                self?.marker!.map = self?.mapView
         }
     }
     
@@ -89,6 +99,7 @@ class MapViewController: UIViewController {
             print(error)
         }
         locationManager.stopUpdatingLocation()
+        marker?.map = nil
     }
     
     @IBAction func trackHistoryButton(_ sender: UIBarButtonItem) {
@@ -100,6 +111,33 @@ class MapViewController: UIViewController {
             let update = GMSCameraUpdate.fit(bounds, withPadding: 50.0)
             mapView.moveCamera(update)
         }
+    }
+    
+    func setMarkerAvatar(pickedImage: UIImage, image: UIImage) -> UIImage {
+        let imgView = UIImageView(image: image)
+        let picImgView = UIImageView(image: pickedImage)
+        picImgView.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+        imgView.addSubview(picImgView)
+        picImgView.center.x = imgView.center.x
+        picImgView.center.y = imgView.center.y - 7
+        picImgView.layer.cornerRadius = picImgView.frame.width/2
+        picImgView.clipsToBounds = true
+        imgView.setNeedsLayout()
+        picImgView.setNeedsLayout()
+        
+        let newImage = imageMarker(view: imgView)
+        return newImage
+    }
+    
+    func imageMarker(view: UIView) -> UIImage {
+        var image: UIImage?
+        UIGraphicsBeginImageContextWithOptions(view.bounds.size, false, 0.0)
+        if let context = UIGraphicsGetCurrentContext() {
+            view.layer.render(in: context)
+            image = UIGraphicsGetImageFromCurrentImageContext()
+            UIGraphicsEndImageContext()
+        }
+        return image ?? UIImage()
     }
     
 }
