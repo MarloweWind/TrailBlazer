@@ -7,14 +7,33 @@
 //
 
 import UIKit
+import GoogleMaps
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        GMSServices.provideAPIKey(apiKey)
+        
+        let center = UNUserNotificationCenter.current()
+        center.getNotificationSettings{ settings in
+            switch settings.authorizationStatus{
+            case .authorized:
+                print("Allowed")
+            case .denied:
+                print("Denied")
+            default:
+                center.requestAuthorization(options: [.alert, .sound, .badge]){ granted, error in
+                    if granted{
+                        print("User allowed")
+                    } else {
+                        print("User denied")
+                    }
+                }
+            }
+        }
+        
         return true
     }
 
